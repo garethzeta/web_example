@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pie Chart</title>
+		<script src="Chart.js"></script>
+	</head>
+	<body>
+		<div id="canvas-holder">
+			<canvas id="chart-area" width="300" height="300"/>
+		</div>
+
+
+	<script>
+
+		var data = [
+				{
+					value: 64,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Total UK population"
+				},
+				{
+					value: 8.3,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Total migrant population"
+				},
+				{
+					value: 2.4,
+					color: "#66CC66",
+					highlight: "#339999",
+					label: "Total EU migrant population"
+				}
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData);
+			};
+
+
+
+			
+	</script>
+	</body>
+</html>
